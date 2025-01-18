@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font texte link: 1er Montserrat & 2de Chilanka & 3eme Ibm Plex Serif */ 
+
+
+body{
+    margin: 0; /* marge extérieur de l'element */
+    padding: 0; /* marge intérieur de l'element */
+    font-family: "Arial", sans-serif;
+}
+.chinese {
+    font-family: "KaiTi", sans-serif; /* Liste de polices possibles "SimSun", "KaiTi", "Zhengkai" */
+}
+/* .pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+*/
+
+.current {
+    color: #fff;
+    background-color: #000;
+  }
+
+nav{
+    display: flex; /* pour mettre les elem de navigation "nav" sur une meme ligne ici flex */
+    flex-wrap: wrap; /* pour mettre les elem de "nav" sur une ligne en dessous (empile en bas) si  manque de place */
+    justify-content: center; /* de center les elem de "nav" auy centre */
+    align-items: center; /* de aligne les elem de "nav" auy centre */
+    border-bottom: 5px solid #6f6f6f;
+}
+.logo{
+    margin-left: -200px;
+} /* marche sans ce truc jsp pk j'ai mis ca, je crois poour la bordure gauche img logo */
+nav .nav-links{
+    margin-top: 35px; /*espace marge "en haut" "intérieur"  */
+    margin-left: 200px; /* marge intérieur a gauche, ici pour "separe le logo des bouttons" */
+}
+nav .nav-links a{
+    text-decoration: none;
+    color: #333;
+    margin-right: 0px; /* cree un espacement a droitre entre chaque "boutton liens" */
+    /*padding-bottom: 5px; /* marge intérieur en bas de l'element */
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.2s ease-in-out
+}
+nav a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+
+header{
+    display: flex; /* aligne les elements */
+    flex-direction: column; /* les empiler en colonne */
+    align-items: center; /* permet d'aligne les elem, ici au centre */
+    background: url("images/kamen_rider_gochard_card.jpg"); /* mettre une image en fond, ex "https://i.ibb.co/4d8CYtM/background-header.jpg"*/
+    /* background-size: cover; /* couvrir la totalité du headers*/
+    color: #fff; /* couleur du texte change een blanc ici*/
+    padding: 40px; /* marge intérieur de tous nos elem, de ici 40px*/
+}
+header h1{
+    font-family: "Chilanka" ,sans-serif;
+    font-size: 35px;    
+}
+header h4{
+    font-family: "Chilanka" ,sans-serif;    
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center; /* sur mobile aligne texte sinon pas utiles */
+}
+
+/* header button{
+    padding: 10px 20px;
+    background-color: #fff;
+    color:#000;
+    border:none;
+    margin-bottom: 30px;
+    outline:none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+} */
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+footer{
+    margin-top: 40px;  /* elogne  le footer de 0px a partir du haut  ( section prins et la)  */
+    border-top: 5px solid #6f6f6f;
+    background-color: rgb(10, 15, 20);
+    color: #fff;
+    padding: 30px 100px; /* met une marge intérieur (30pxhautbas & 100pxdroitegauche) */
+    border-bottom: 1px solid #fff;
+    
+} 
+footer .footers{
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+footer .footers .footer-grid{
+    margin-right: 30px;
+}
+footer #contact{
+    color: rgb(181, 181, 181);
+}
+
+.fright{
+    margin: 0 0 0 15px;
+    float: right;
+}
+.checked {
+    color: orange;
+}
+
+
+@media screen and (max-width:680px){
+    .logo{
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+    .pdf{
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+    nav .nav-links{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card {
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
+}
